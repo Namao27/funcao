@@ -37,7 +37,7 @@ typedef struct componente {
     int ID_fornecedor;
     int ID_fabricante;
     char tipo[50];
-    int condicao; // 0=Novo, 1=Utilizdo
+    int condicao; // 0=Novo, 1=Utilizado
     int ID_posto;
     char observacoes[200];
 } Componente;
