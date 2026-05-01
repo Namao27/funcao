@@ -4,7 +4,7 @@
 #include "estruturas.h"
     int main() {
 
-
+printf("Digite o nome do arquivo: ");
 
         return 0;
     }
