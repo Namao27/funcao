@@ -81,3 +81,19 @@ Posto *p = &posto[totalPosto];
             return;
         }
     }
+
+void inserirComponente() {
+    if (totalComponente > MAX) {
+        printf("Limite de componentes atingido!\n");
+        return;
+    }
+Componente *c = &componente[totalComponente];
+    printf("ID: "); 
+    scanf("%d", &c->ID_produto);
+    for (int i = 0; i < totalComponente; i++) {
+        if (componente[i].ID_produto == c->ID_produto) {
+            printf("Componente com este ID ja existe!\n");
+            return;
+        }
+    }
+    }
