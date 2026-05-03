@@ -97,3 +97,4 @@ Componente *c = &componente[totalComponente];
         }
     }
     }
+    
