@@ -26,7 +26,7 @@ Operacoes operacao[MAX];
 int totalOperacao = 0;
 
 void inserirFuncionario(){
-    if (totalFuncionario >= MAX) {
+    if (totalFuncionario > MAX) {
         printf("Limite de funcionarios atingido!\n");
         return;
     }
@@ -54,7 +54,7 @@ void inserirFuncionario(){
 }
 
 void inserirEmpresa(){
-    if (totalEmpresa >= MAX) {
+    if (totalEmpresa > MAX) {
         printf("Limite de empresas atingido!\n");
         return;
     }
@@ -82,7 +82,7 @@ void inserirEmpresa(){
 }
 
 void inserirPosto(){
-    if (totalPosto >= MAX) {
+    if (totalPosto > MAX) {
         printf("Limite de postos atingido!\n");
         return;
     }
@@ -114,7 +114,7 @@ void inserirPosto(){
 }
 
 void inserirComponente() {
-    if (totalComponente >= MAX) {
+    if (totalComponente > MAX) {
         printf("Limite de componentes atingido!\n");
         return;
     }
@@ -153,5 +153,23 @@ void inserirComponente() {
     
     totalComponente++;
     printf("Componente inserido com sucesso!\n");
-}
+    }
 
+    void inserirOperacao() {
+    if (totalOperacao > MAX) { 
+        printf("Limite de operacoes atingido!\n");
+        return;
+    }
+    Componente *c = &componente[totalComponente];
+    printf("ID: ");
+    scanf("%d", &c->ID_produto);
+    for (int i = 0; i < totalComponente; i++) {
+        if (componente[i].ID_produto == c->ID_produto) {
+            printf("Operacao com este ID ja existe!\n");
+
+            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+            return;
+       
+        }
+    }
